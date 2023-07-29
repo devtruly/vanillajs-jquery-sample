@@ -1,5 +1,5 @@
 // Delvelop.v.0.0.1 2012.04.18
-// Delveloper Info Name.ÇÑ¿µ¹Î Phone.010-9771-8915 E-mail.kllliv@naver.com
+// Delveloper Info Name.í•œì˜ë¯¼ Phone.010-9771-8915 E-mail.dev-truly@naver.com
 (function($){
 	$.fn.multiSelect_SortTable = function(o){
 		var opts = $.extend({}, $.fn.multiSelect_SortTable.defaults, o);
@@ -10,41 +10,41 @@
 			lastClick, diffClick; // timestamps
 		
 		
-		$( this ).sortable();//sortable ¼±¾ğ
+		$( this ).sortable();//sortable ì„ ì–¸
 		$( this ).disableSelection();
 		$( this ).sortable({
-			start : function(){//sortable ½ÃÀÛ½Ã ½ÇÇà ÀÌº¥Æ®
-				$(this).find('li').each(function(){//¸ñ·Ï ¸®½ºÆ® ¼ö¸¸Å­ ¹İº¹
-					if(event_cd == $(this).attr('event_cd')){//¼±ÅÃµÇ°í ÀÌµ¿ÇÑ °³Ã¼ È®ÀÎ 
+			start : function(){//sortable ì‹œì‘ì‹œ ì‹¤í–‰ ì´ë²¤íŠ¸
+				$(this).find('li').each(function(){//ëª©ë¡ ë¦¬ìŠ¤íŠ¸ ìˆ˜ë§Œí¼ ë°˜ë³µ
+					if(event_cd == $(this).attr('event_cd')){//ì„ íƒë˜ê³  ì´ë™í•œ ê°œì²´ í™•ì¸ 
 						$(this).addClass(selectedClass);
 					}	
 				});
-				$('.'+selectedClass).each(function(){//¼±ÅÃµÈ °´Ã¼ ¼ö¸¸Å­ ¹İº¹
-					if(event_cd == $(this).attr('event_cd')){//¼±ÅÃµÇ¾î ÀÌµ¿ÇÏ°í ÀÖ´Â °³Ã¼ÀÇ °æ¿ì È°¼º
+				$('.'+selectedClass).each(function(){//ì„ íƒëœ ê°ì²´ ìˆ˜ë§Œí¼ ë°˜ë³µ
+					if(event_cd == $(this).attr('event_cd')){//ì„ íƒë˜ì–´ ì´ë™í•˜ê³  ìˆëŠ” ê°œì²´ì˜ ê²½ìš° í™œì„±
 						$(this).css('opacity',opts.sort_opa);
-					}else{//¼±ÅÃ µÇ¾úÁö¸¸ ÀÌµ¿ÀÌ µÇÁö ¾Ê´Â °³Ã¼ ºñÈ°¼º
+					}else{//ì„ íƒ ë˜ì—ˆì§€ë§Œ ì´ë™ì´ ë˜ì§€ ì•ŠëŠ” ê°œì²´ ë¹„í™œì„±
 						$(this).css('opacity',opts.multi_opa);
 					}
 				});
 			},
-			stop: function(){//¾à°£ÀÇ dragÀÌº¥Æ®°¡ ¹ß»ıÇÏ´Ù Ãë¼ÒµÈ°æ¿ì ºñÈ°¼ºÈ­µÈ ¼±ÅÃÀÚ ÀçÈ°¼º
+			stop: function(){//ì•½ê°„ì˜ dragì´ë²¤íŠ¸ê°€ ë°œìƒí•˜ë‹¤ ì·¨ì†Œëœê²½ìš° ë¹„í™œì„±í™”ëœ ì„ íƒì ì¬í™œì„±
 				$(this).find('li').css('opacity','1');
-				$(this).find('li').each(function(){//¸ñ·Ï ¸®½ºÆ® ¼ö¸¸Å­ ¹İº¹
-					if(event_cd == $(this).attr('event_cd')){//¼±ÅÃµÇ°í ÀÌµ¿ÇÑ °³Ã¼ È®ÀÎ 
+				$(this).find('li').each(function(){//ëª©ë¡ ë¦¬ìŠ¤íŠ¸ ìˆ˜ë§Œí¼ ë°˜ë³µ
+					if(event_cd == $(this).attr('event_cd')){//ì„ íƒë˜ê³  ì´ë™í•œ ê°œì²´ í™•ì¸ 
 						$(this).addClass(selectedClass);
 					}	
 				});
 			},
-			update : function() {//ÀÌº¥Æ® ¿Ï·á½Ã ½ÇÇà
-				$('.'+selectedClass).css('opacity','1');//¼±ÅÃÀÚ ÀçÈ°¼º
-				$(this).find('li').each(function(){//¸ñ·Ï ¸®½ºÆ® ¼ö¸¸Å­ ¹İº¹
-					if(event_cd == $(this).attr('event_cd')){//¼±ÅÃµÇ°í ÀÌµ¿ÇÑ °³Ã¼ È®ÀÎ 
-						if($(this).hasClass(selectedClass)){//ÀÌµ¿ÇÑ °³Ã¼°¡ ¼±ÅÃµÈ °³Ã¼ÀÌ¸é ¼±ÅÃÃÊ±âÈ­
+			update : function() {//ì´ë²¤íŠ¸ ì™„ë£Œì‹œ ì‹¤í–‰
+				$('.'+selectedClass).css('opacity','1');//ì„ íƒì ì¬í™œì„±
+				$(this).find('li').each(function(){//ëª©ë¡ ë¦¬ìŠ¤íŠ¸ ìˆ˜ë§Œí¼ ë°˜ë³µ
+					if(event_cd == $(this).attr('event_cd')){//ì„ íƒë˜ê³  ì´ë™í•œ ê°œì²´ í™•ì¸ 
+						if($(this).hasClass(selectedClass)){//ì´ë™í•œ ê°œì²´ê°€ ì„ íƒëœ ê°œì²´ì´ë©´ ì„ íƒì´ˆê¸°í™”
 							$(this).removeClass(selectedClass);
 						}
-						$('.'+selectedClass).insertAfter($(this));//ÀÌµ¿ÇÑ °³Ã¼ µÚ·Î ´Ù¸¥ ¼±ÅÃ °³Ã¼ ÀÌµ¿
+						$('.'+selectedClass).insertAfter($(this));//ì´ë™í•œ ê°œì²´ ë’¤ë¡œ ë‹¤ë¥¸ ì„ íƒ ê°œì²´ ì´ë™
 						$(this).addClass(selectedClass);
-						//$('.'+selectedClass).removeClass(selectedClass);//¼±ÅÃ°³Ã¼ ¼±ÅÃÃÊ±âÈ­
+						//$('.'+selectedClass).removeClass(selectedClass);//ì„ íƒê°œì²´ ì„ íƒì´ˆê¸°í™”
 					}	
 				});
 				
@@ -57,7 +57,7 @@
 			}
 		}).css('cursor','pointer');
 
-		$(this).find('li')//Å¬¸¯ ½Ã ¼±ÅÃ ºñ¼±ÅÃ Ã³¸®
+		$(this).find('li')//í´ë¦­ ì‹œ ì„ íƒ ë¹„ì„ íƒ ì²˜ë¦¬
 		// Script to deferentiate a click from a mousedown for drag event
 		.bind('mousedown mouseup', function(e) {
 			if (e.type == "mousedown") {
