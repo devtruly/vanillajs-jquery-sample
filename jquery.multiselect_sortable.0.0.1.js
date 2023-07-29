@@ -1,5 +1,5 @@
 // Delvelop.v.0.0.1 2012.04.18
-// Delveloper Info Name.한영민 Phone.010-9771-8915 E-mail.dev-truly@naver.com
+// Delveloper Info Name.한영민 E-mail.dev-truly@naver.com
 (function($){
 	$.fn.multiSelect_SortTable = function(o){
 		var opts = $.extend({}, $.fn.multiSelect_SortTable.defaults, o);
